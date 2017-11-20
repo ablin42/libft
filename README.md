@@ -1,1 +1,1 @@
-# libft projets @ 42
+# libft project @ 42
