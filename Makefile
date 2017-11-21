@@ -1,4 +1,4 @@
-SRCS = srcs/*.c
+SRCS = ft*
 HEADERS = "includes/"
 NAME = "libft.a"
 

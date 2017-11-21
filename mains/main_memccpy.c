@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "ft_memmove.c"
+#include "ft_memccpy.c"
 
 int	main()
 {
@@ -25,17 +25,17 @@ int	main()
 	strcpy(kill, "Kill");
 	strcpy(ext, "Exterminate");
 	
-	printf("ME(Entropy, Rapture, 7)	: %s	||	", ft_memmove(ent, rap, 7));
-	printf("LIB	: %s\n", memmove(ent, rap, 7));
-	
-	printf("ME(Destruction, Void, 2): %s	||	", ft_memmove(des, voi, 2));
-	printf("LIB	: %s\n", memmove(des, voi, 2));
-	//CRASH TEST OVERFLOW
-	printf("ME(Kill, Exterminate, 8): %s		||	", ft_memmove(kill, ext, 4));
-	printf("LIB	: %s\n", memmove(kill, ext, 4));
+	printf("ME(Entropy, Rapture, p, 7)	: %s	||	", ft_memccpy(ent, rap, 'p', 7));
+	printf("LIB	: %s\n", memccpy(ent, rap, 'p', 7));
 
-	//printf("\n %s, %s \n \n", &ext[0], &ext[1]);
-	//printf("ME(ext[0], ext[1], 4)	: %s	||	", ft_memmove(&ext[0], &ext[1], 4));
-	//printf("LIB	: %s\n", memmove(&ext[0], &ext[1], 4));
+	printf("ME(Entropy, Rapture, p, 2)	: %s	||	", ft_memccpy(ent, rap, 'p', 2));
+	printf("LIB	: %s\n", memccpy(ent, rap, 'p', 2));
+
+	printf("ME(Destruction, Void, x, 4)	: %s	||	", ft_memccpy(des, voi, 'x', 4));
+	printf("LIB	: %s\n", memccpy(des, voi, 'x', 4));
+
+	printf("ME(Kill, Exterminate, o, 10)	: %s	||	", ft_memccpy(kill, ext, 'o', 10));
+	printf("LIB	: %s\n", memccpy(kill, ext, 'p', 10));
+
 	return (0);
 }

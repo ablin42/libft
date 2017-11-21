@@ -31,7 +31,7 @@ int	main()
 	printf("ME(Destruction, Void, 2): %s	||	", ft_memcpy(des, voi, 2));
 	printf("LIB	: %s\n", memcpy(des, voi, 2));
 
-	printf("ME(Kill, Exterminate, 8): %s	||	", ft_memcpy(kill, ext, 4));
+	printf("ME(Kill, Exterminate, 8): %s		||	", ft_memcpy(kill, ext, 4));
 	printf("LIB	: %s\n", memcpy(kill, ext, 4));
 
 	//printf("\n %s, %s \n \n", &ext[0], &ext[1]);

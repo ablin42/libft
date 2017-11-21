@@ -35,10 +35,10 @@ int	main()
 	printf("ME(Entropy, XXX)	: %s	||	", ft_strstr(ent, rap));
 	printf("LIB	: %s\n", strstr(ent, rap));
 
-	//printf("ME(Kill, ily)	: %s	||	", ft_strstr(kill, ext));
-	//printf("LIB	: %s\n", strstr(kill, ext));
+	printf("ME(Kill, ily)		: %s	||	", ft_strstr(kill, ext));
+	printf("LIB	: %s\n", strstr(kill, ext));
 
-	//printf("ME(Kill, ILY)	: %s	||	", ft_strstr(kill, ext2));
-	//printf("LIB	: %s\n", strstr(kill, ext2));
+	printf("ME(Kill, ILY)		: %s	||	", ft_strstr(kill, ext2));
+	printf("LIB	: %s\n", strstr(kill, ext2));
 	return (0);
 }

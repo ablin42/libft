@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 20:17:43 by ablin             #+#    #+#             */
-/*   Updated: 2017/11/21 20:17:44 by ablin            ###   ########.fr       */
+/*   Created: 2017/11/21 20:30:32 by ablin             #+#    #+#             */
+/*   Updated: 2017/11/21 21:04:54 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <string.h>
+#include <stdio.h>
 
-void	ft_putendl_fd(char const *s, int fd)
+void *ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	int i;
+	size_t	i;
 
 	i = 0;
-	while (s[i] != '\0')
+	while (i < n && ((char *)src)[i] != (char)c)
 	{
-		write(fd, &s[i], 1);
+		printf("[%c : %c]\n", ((char *)src)[i], (char)c);
+		((char *)dest)[i] = ((char*)src)[i];
 		i++;
 	}
-	write (fd, "\n", 1);
+	return (dest);
 }

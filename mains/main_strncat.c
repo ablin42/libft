@@ -23,13 +23,13 @@ int	main()
 	strcpy(voi, "Void");
 	strcpy(kill, "Kill");
 	strcpy(ext, "Exterminate");
-	
+
 	printf("ME(Entropy, Rapture, 4)		: %s 		||	", ft_strncat(ent, rap, 4));
 	printf("LIB	: %s\n", strncat(ent, rap, 4));
 	
 	printf("ME(Destruction, Void, 8)	: %s	||	", ft_strncat(des, voi, 8));
 	printf("LIB	: %s\n", strncat(des, voi, 8));
-	//CRASH TEST OVERFLOW
+	
 	printf("ME(Kill, Exterminate, 13)	: %s	||	", ft_strncat(kill, ext, 13));
 	printf("LIB	: %s\n", strncat(kill, ext, 13));
 	return (0);
