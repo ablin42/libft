@@ -10,25 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include "ft_strlen.c"
+#include "libft.h"
 
 char	*ft_strncat(char *dest, const char *src, size_t n)
 {
 	size_t	i;
-	int		j;
-	int		end;
+	int		len;
 
 	i = 0;
-	j = 0;
-	end = ft_strlen(dest);
-	while (i < n)
+	len = ft_strlen(dest);
+	while (i < n && src[i] != '\0')
 	{
-		dest[end + i] = src[j];
+		dest[len + i] = src[i];
 		i++;
-		j++;
-		if (src[j] == '\0')
-			j =  0;
 	}
+	dest[len + i] = '\0';
 	return (dest);
 }

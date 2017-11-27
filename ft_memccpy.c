@@ -10,19 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void *ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	while (i < n && ((char *)src)[i] != (char)c)
+	while (i < n && ((char *)src)[i] != (char)c && ((char *)dest)[i] != (char)c)
 	{
-		printf("[%c : %c]\n", ((char *)src)[i], (char)c);
-		((char *)dest)[i] = ((char*)src)[i];
+		((char *)dest)[i] = ((char *)src)[i];
 		i++;
+		dest++;
+		if (((char *)src)[i] == (char)c)
+			return (dest + 1);
 	}
-	return (dest);
+	return (NULL);
 }

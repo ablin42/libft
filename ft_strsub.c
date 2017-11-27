@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 20:17:22 by ablin             #+#    #+#             */
-/*   Updated: 2017/11/21 20:17:23 by ablin            ###   ########.fr       */
+/*   Created: 2017/11/21 20:19:55 by ablin             #+#    #+#             */
+/*   Updated: 2017/11/21 20:19:56 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	write(fd, &c, 1);
+	size_t	i;
+	char	*sub;
+
+	i = 0;
+	sub = (char *)malloc(sizeof(sub) * (len + 1));
+	if (sub == NULL)
+		return (NULL);
+	while (s[i] != '\0' && i < len)
+	{
+		sub[i] = s[start + i];	
+		i++;
+	}
+	sub[i] = '\0';
+	return (sub);
 }

@@ -1,10 +1,11 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "ft_memccpy.c"
+#include "ft_strjoin.c"
 
 int	main()
 {
+	
 	char *ent;
 	char *rap;
 	char *des;
@@ -24,18 +25,11 @@ int	main()
 	strcpy(voi, "Void");
 	strcpy(kill, "Kill");
 	strcpy(ext, "Exterminate");
-	
-	printf("ME(Entropy, Rapture, p, 7)	: %s		||	", ft_memccpy(ent, rap, 'p', 7));
-	printf("LIB	: %s\n", memccpy(ent, rap, 'p', 7));
 
-	printf("ME(Entropy, Rapture, p, 2)	: %s	||	", ft_memccpy(ent, rap, 'p', 2));
-	printf("LIB	: %s\n", memccpy(ent, rap, 'p', 2));
+	printf("ME(Entropy, Rapture)	: %s \n", ft_strjoin(ent, rap));
 
-	printf("ME(Destruction, Void, x, 4)	: %s	||	", ft_memccpy(des, voi, 'x', 4));
-	printf("LIB	: %s\n", memccpy(des, voi, 'x', 4));
+	printf("ME(Destruction, Void)	: %s \n", ft_strjoin(des, voi));
 
-	printf("ME(Kill, Exterminate, o, 10)	: %s	||	", ft_memccpy(kill, ext, 'o', 10));
-	printf("LIB	: %s\n", memccpy(kill, ext, 'p', 10));
-
+	printf("ME(Kill, Exterminate)	: %s \n", ft_strjoin(kill, ext));
 	return (0);
 }

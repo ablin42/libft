@@ -12,7 +12,6 @@
 
 #include <stdio.h>
 #include "libft.h"
-#include "ft_strlen.c"
 
 char	*ft_strstr(const char *haystack, const char *needle)
 {
@@ -35,5 +34,5 @@ char	*ft_strstr(const char *haystack, const char *needle)
 		}
 		i++;
 	}
-	return ("(null)");
+	return (NULL);
 }

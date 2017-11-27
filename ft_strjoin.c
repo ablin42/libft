@@ -1,43 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 20:18:11 by ablin             #+#    #+#             */
-/*   Updated: 2017/11/21 20:18:13 by ablin            ###   ########.fr       */
+/*   Created: 2017/11/21 20:19:55 by ablin             #+#    #+#             */
+/*   Updated: 2017/11/21 20:19:56 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	void	ft_putchar_fd(char c, int fd)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	write(fd, &c, 1);
-}
+	int		i;
+	int		j;
+	char	*join;
 
-void			ft_putnbr_fd(int n, int fd)
-{	
-	if (n == -2147483648)
-	{	
-		ft_putchar_fd('-', fd);
-		ft_putnbr_fd(214748364, fd);
-		ft_putchar_fd('8', fd);
+	i = 0;
+	j = 0;
+	join = (char *)malloc(sizeof(join) * ((ft_strlen(s1) + ft_strlen(s2) + 1)));
+	if (join == NULL)
+		return (NULL);
+	while (s1[i] != '\0')
+	{
+		join[i] = s1[i];	
+		i++;
+	}
+	while (s2[j] != '\0') 
+	{
+		join[i] = s2[j];
+		i++;
+		j++;
+	}
 
-	}
-	if (n < 0 && n != -2147483648)
-	{
-		ft_putchar_fd('-', fd);
-		n = -n;
-	}
-	if (n > 9)
-	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putnbr_fd(n % 10, fd);
-	}
-	else if (n != -2147483648 && n <= 9)
-	{
-		ft_putchar_fd(n + '0', fd);
-	}
+	join[i] = '\0';
+	return (join);
 }

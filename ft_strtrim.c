@@ -1,39 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 04:18:39 by ablin             #+#    #+#             */
-/*   Updated: 2017/11/13 05:34:00 by ablin            ###   ########.fr       */
+/*   Created: 2017/11/21 20:19:55 by ablin             #+#    #+#             */
+/*   Updated: 2017/11/21 20:19:56 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strlen(char *str)
+char 	*ft_strtrim(char const *s)
 {
 	int		i;
+	int		j;
+	int		end;
+	char	*trim;
 
 	i = 0;
-	while (str[i] != '\0')
+	j = 0;
+	end = ft_strlen(s);
+	trim = (char *)malloc(sizeof(trim) * (ft_strlen(s) + 1));
+	if (trim == NULL)
+		return (NULL);
+	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
 		i++;
-	return (i);
-}
-
-char	*ft_strdup(char *src)
-{
-	int		i;
-	char	*dest;
-
-	i = 0;
-	dest = (char*)malloc(sizeof(*src) * (ft_strlen(src) + 1));
-	while (src[i] != '\0')
+	while (s[end] == ' ' || s[end] == '\t' || s[end] == '\n')
+		end--;
+	end = end * -1;
+	end = ft_strlen(s) - i - end;
+	while (s[i] != '\0' && j < end)
 	{
-		dest[i] = src[i];
+		trim[j] = s[i];
 		i++;
+		j++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	trim[j] = '\0';
+	return (trim);
 }

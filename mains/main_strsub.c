@@ -1,9 +1,11 @@
+#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "ft_strncat.c"
+#include "ft_strsub.c"
 
 int	main()
 {
+	
 	char *ent;
 	char *rap;
 	char *des;
@@ -18,19 +20,13 @@ int	main()
 	kill = (char*)malloc(sizeof(kill) * (4 + 1));
 	ext = (char*)malloc(sizeof(ext) * (11 + 1));
 	strcpy(ent, "Entropy");
-	strcpy(rap, "Rapture");
 	strcpy(des, "Destruction");
-	strcpy(voi, "Void");
-	strcpy(kill, "Kill");
 	strcpy(ext, "Exterminate");
 
-	printf("ME(Entropy, Rapture, 4)		: %s 	||	", ft_strncat(ent, rap, 4));
-	printf("LIB	: %s\n", strncat(ent, rap, 4));
-	
-	printf("ME(Destruction, Void, 8)	: %s	||	", ft_strncat(des, voi, 8));
-	printf("LIB	: %s\n", strncat(des, voi, 8));
-	
-	printf("ME(Kill, Exterminate, 13)	: %s	||	", ft_strncat(kill, ext, 13));
-	printf("LIB	: %s\n", strncat(kill, ext, 13));
+	printf("ME(Entropy, 4, 3)	: %s \n", ft_strsub(ent, 4, 3));
+
+	printf("ME(Destruction, 2, 6)	: %s \n", ft_strsub(des, 2, 6));
+
+	printf("ME(Exterminate, 2, 4)	: %s \n", ft_strsub(ext, 2, 4));
 	return (0);
 }
