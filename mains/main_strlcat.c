@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-//#include "ft_strlcat.c"
+#include "ft_strlcat.c"
 
 int	main()
 {
@@ -25,13 +25,13 @@ int	main()
 	strcpy(kill, "Kill");
 	strcpy(ext, "Exterminate");
 	
-	//printf("ME(Entropy, Rapture, 4)		: %s 		||	", ft_strlcat(ent, rap, 4));
-	printf("LIB	: %s\n", strlcat(ent, rap, 4));
+	printf("ME(Entropy, Rapture, 4)		: %x 		||	", ft_strlcat(ent, rap, 4));
+	//printf("LIB	: %s\n", strlcat(ent, rap, 4));
 	
-	//printf("ME(Destruction, Void, 8)	: %s	||	", ft_strlcat(des, voi, 8));
-	printf("LIB	: %s\n", strlcat(des, voi, 8));
+	printf("ME(Destruction, Void, 8)	: %x	||	", ft_strlcat(des, voi, 8));
+	//printf("LIB	: %s\n", strlcat(des, voi, 8));
 	//CRASH TEST OVERFLOW
-	//printf("ME(Kill, Exterminate, 13)	: %s	||	", ft_strlcat(kill, ext, 13));
-	printf("LIB	: %s\n", strlcat(kill, ext, 13));
+	printf("ME(Kill, Exterminate, 13)	: %x	||	", ft_strlcat(kill, ext, 13));
+	//printf("LIB	: %s\n", strlcat(kill, ext, 13));
 	return (0);
 }

@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <stdio.h>
 
-int		ft_wl(char const *str, char c)
+static int		ft_wl(char const *str, char c)
 {
 	int i;
 
