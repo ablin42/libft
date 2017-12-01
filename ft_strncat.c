@@ -6,24 +6,24 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 20:21:10 by ablin             #+#    #+#             */
-/*   Updated: 2017/11/21 21:59:06 by ablin            ###   ########.fr       */
+/*   Updated: 2017/12/01 00:16:54 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncat(char *dest, const char *src, size_t n)
+char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
 {
 	size_t	i;
 	int		len;
 
 	i = 0;
-	len = ft_strlen(dest);
-	while (i < n && src[i] != '\0')
+	len = ft_strlen(s1);
+	while (i < n && s2[i] != '\0')
 	{
-		dest[len + i] = src[i];
+		s1[len + i] = s2[i];
 		i++;
 	}
-	dest[len + i] = '\0';
-	return (dest);
+	s1[len + i] = '\0';
+	return (s1);
 }

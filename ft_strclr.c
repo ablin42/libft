@@ -6,13 +6,13 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 20:12:50 by ablin             #+#    #+#             */
-/*   Updated: 2017/11/21 20:12:52 by ablin            ###   ########.fr       */
+/*   Updated: 2017/12/01 00:51:08 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void 	ft_strclr(char *s)
+void	ft_strclr(char *s)
 {
 	int i;
 

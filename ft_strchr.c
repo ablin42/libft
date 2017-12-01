@@ -6,19 +6,19 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 20:20:03 by ablin             #+#    #+#             */
-/*   Updated: 2017/11/21 20:20:04 by ablin            ###   ########.fr       */
+/*   Updated: 2017/12/01 00:54:52 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *str, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int i;
 
 	i = 0;
-	while (str[i] != '\0')
-	{	
-		if (str[i] == c)
-			return ((char *)&str[i]);
+	while (s[i] != '\0')
+	{
+		if (s[i] == c)
+			return ((char *)&s[i]);
 		i++;
 	}
 	return (0);

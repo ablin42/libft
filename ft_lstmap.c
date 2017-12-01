@@ -1,5 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/01 00:38:57 by ablin             #+#    #+#             */
+/*   Updated: 2017/12/01 02:13:23 by ablin            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include "ft_lstnew.c"
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
@@ -10,7 +21,7 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	while (lst != NULL)
 	{
 		tmp = f(lst);
-		newlist = ft_lstnew(tmp->content, tmp->content_size);
+		if ((newlist = ft_lstnew(tmp->content, tmp->content_size)) == NULL)
 			return (NULL);
 		newlist = newlist->next;
 		lst = lst->next;

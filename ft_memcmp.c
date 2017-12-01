@@ -6,18 +6,18 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 20:14:28 by ablin             #+#    #+#             */
-/*   Updated: 2017/11/21 20:14:30 by ablin            ###   ########.fr       */
+/*   Updated: 2017/12/01 00:41:48 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *str1, const void *str2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t i;
 
 	i = 0;
-	while (i < n && ((char *)str1)[i] == ((char *)str2)[i])
-			i++;
-	return (((char *)str1)[i] - ((char *)str2)[i]);
+	while (i < n && ((char *)s1)[i] == ((char *)s2)[i])
+		i++;
+	return (((char *)s1)[i] - ((char *)s2)[i]);
 }

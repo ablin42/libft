@@ -6,27 +6,26 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 20:19:55 by ablin             #+#    #+#             */
-/*   Updated: 2017/11/21 20:19:56 by ablin            ###   ########.fr       */
+/*   Updated: 2017/12/01 00:56:13 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *dest, const char *src)
+char	*ft_strcat(char *restrict s1, const char *restrict s2)
 {
 	int i;
 	int end;
 
 	i = 0;
 	end = 0;
-	while (dest[i] != '\0')
+	while (s1[i] != '\0')
 		i++;
 	end = i;
 	i = 0;
-	while (src[i] != '\0')
+	while (s2[i] != '\0')
 	{
-		dest[end + i] = src[i];	
+		s1[end + i] = s2[i];
 		i++;
 	}
-
-	dest[end + i] = '\0';
-	return (dest);
+	s1[end + i] = '\0';
+	return (s1);
 }

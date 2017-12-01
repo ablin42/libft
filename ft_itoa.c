@@ -6,20 +6,32 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 20:23:23 by ablin             #+#    #+#             */
-/*   Updated: 2017/11/21 20:23:27 by ablin            ###   ########.fr       */
+/*   Updated: 2017/12/01 01:32:39 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+static char	*fillstr(int i, int n, char *str)
+{
+	while (i >= 1)
+	{
+		i--;
+		if ((n % 10) != 0)
+			str[i] = n % 10 + '0';
+		n = n / 10;
+	}
+	return (str);
+}
+
+char		*ft_itoa(int n)
 {
 	int		i;
 	int		nb;
 	char	*str;
 
 	if (n == -2147483648)
-		return(ft_strdup("-2147483648"));
+		return (ft_strdup("-2147483648"));
 	i = 1;
 	nb = n;
 	while (nb /= 10)
@@ -33,12 +45,5 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 	}
 	str[i] = '\0';
-	while (i >= 1)
-	{
-		i--;
-		if ((n % 10) != 0)
-		str[i] = n % 10 + '0';
-		n = n / 10;
-	}
-	return (str);
+	return (fillstr(i, n, str));
 }

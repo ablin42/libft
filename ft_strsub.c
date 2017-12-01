@@ -6,7 +6,7 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 20:19:55 by ablin             #+#    #+#             */
-/*   Updated: 2017/11/21 20:19:56 by ablin            ###   ########.fr       */
+/*   Updated: 2017/12/01 01:10:32 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	while (s[i] != '\0' && i < len)
 	{
-		sub[i] = s[start + i];	
+		sub[i] = s[start + i];
 		i++;
 	}
 	sub[i] = '\0';

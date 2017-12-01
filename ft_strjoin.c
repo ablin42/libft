@@ -6,7 +6,7 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 20:19:55 by ablin             #+#    #+#             */
-/*   Updated: 2017/11/21 20:19:56 by ablin            ###   ########.fr       */
+/*   Updated: 2017/12/01 00:52:24 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,15 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	while (s1[i] != '\0')
 	{
-		join[i] = s1[i];	
+		join[i] = s1[i];
 		i++;
 	}
-	while (s2[j] != '\0') 
+	while (s2[j] != '\0')
 	{
 		join[i] = s2[j];
 		i++;
 		j++;
 	}
-
 	join[i] = '\0';
 	return (join);
 }

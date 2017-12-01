@@ -6,25 +6,19 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 20:18:00 by ablin             #+#    #+#             */
-/*   Updated: 2017/11/21 20:18:03 by ablin            ###   ########.fr       */
+/*   Updated: 2017/12/01 00:49:24 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	void	ft_putchar(char c)
+void	ft_putnbr(int n)
 {
-	write(1, &c, 1);
-}
-
-void			ft_putnbr(int n)
-{	
 	if (n == -2147483648)
-	{	
+	{
 		ft_putchar('-');
 		ft_putnbr(214748364);
 		ft_putchar('8');
-
 	}
 	if (n < 0 && n != -2147483648)
 	{

@@ -6,12 +6,11 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 20:19:55 by ablin             #+#    #+#             */
-/*   Updated: 2017/11/21 20:19:56 by ablin            ###   ########.fr       */
+/*   Updated: 2017/12/01 02:30:13 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int		ft_wl(char const *str, char c)
 {
@@ -23,7 +22,23 @@ static int		ft_wl(char const *str, char c)
 	return (i);
 }
 
-char	**ft_strsplit(char const *s, char c)
+static int		ft_firstmalloc(char const *s, char c)
+{
+	int i;
+	int nb;
+
+	i = 0;
+	nb = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == c && (s[i + 1] != c && s[i + 1] != '\0'))
+			nb++;
+		i++;
+	}
+	return (nb);
+}
+
+char			**ft_strsplit(char const *s, char c)
 {
 	int		i;
 	int		j;
@@ -33,19 +48,10 @@ char	**ft_strsplit(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	nb = 0;
 	start = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == c && (s[i + 1] != c && s[i + 1] != '\0'))
-			nb++;
-		i++;
-	}
+	nb = ft_firstmalloc(s, c);
 	if ((split = (char**)malloc(sizeof(split) * (nb + 1))) == NULL)
 		return (NULL);
-
-
-	i = 0;
 	while (s[i] != '\0')
 	{
 		while (s[i] == c)
@@ -56,7 +62,6 @@ char	**ft_strsplit(char const *s, char c)
 		nb = ft_wl(&s[start], c);
 		if ((split[i] = (char *)malloc(sizeof(split) * (nb + 1))) == NULL)
 			return (NULL);
-
 		while (j < nb)
 		{
 			split[i][j] = s[start];
@@ -70,4 +75,4 @@ char	**ft_strsplit(char const *s, char c)
 	}
 	ft_putchar('\n');
 	return (split);
- }
+}

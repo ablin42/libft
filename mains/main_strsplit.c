@@ -4,8 +4,6 @@
 #include "ft_strsplit.c"
 #include "showtab.c"
 
-
-
 int	main()
 {
 	

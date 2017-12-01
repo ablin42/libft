@@ -6,7 +6,7 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 20:20:03 by ablin             #+#    #+#             */
-/*   Updated: 2017/11/21 20:20:04 by ablin            ###   ########.fr       */
+/*   Updated: 2017/12/01 00:47:41 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	i = 0;
 	while (i < n)
-	{	
+	{
 		if (((char *)s)[i] == (char)c)
 			return (((char *)s) + i);
 		i++;

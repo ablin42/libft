@@ -6,13 +6,13 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 20:19:55 by ablin             #+#    #+#             */
-/*   Updated: 2017/11/21 20:19:56 by ablin            ###   ########.fr       */
+/*   Updated: 2017/12/01 01:20:21 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char 	*ft_strtrim(char const *s)
+char	*ft_strtrim(char const *s)
 {
 	int		i;
 	int		j;

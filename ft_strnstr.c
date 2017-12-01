@@ -6,12 +6,11 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 20:22:36 by ablin             #+#    #+#             */
-/*   Updated: 2017/11/23 00:58:29 by ablin            ###   ########.fr       */
+/*   Updated: 2017/12/01 01:09:47 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "ft_strlen.c"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t n)
 {
