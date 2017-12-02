@@ -30,12 +30,17 @@ int	main()
 	
 	printf("ME(Destruction, Void, 2): %s	||	", ft_memmove(des, voi, 2));
 	printf("LIB	: %s\n", memmove(des, voi, 2));
-	//CRASH TEST OVERFLOW
-	printf("ME(Kill, Exterminate, 8): %s		||	", ft_memmove(kill, ext, 4));
-	printf("LIB	: %s\n", memmove(kill, ext, 4));
 
-	//printf("\n %s, %s \n \n", &ext[0], &ext[1]);
-	//printf("ME(ext[0], ext[1], 4)	: %s	||	", ft_memmove(&ext[0], &ext[1], 4));
-	//printf("LIB	: %s\n", memmove(&ext[0], &ext[1], 4));
+	char	testA1[] = "abcdef";
+	char	testB1[] = "abcdef";
+	char	testA2[] = "abcdef";
+	char	testB2[] = "abcdef";
+
+	printf("ME(abcdef + 1, abcdef, 5): %s	||	", ft_memmove(testA1 + 1, testA1, 5));
+	printf("LIB	: %s\n", memmove(testB1 + 1, testB1, 5));
+
+	printf("ME(abcdef, abcdef + 1, 0): %s	||	", ft_memmove(testA2, testA2 + 1, 0));
+	printf("LIB	: %s\n", memmove(testB2, testB2 + 1, 0));
+
 	return (0);
 }

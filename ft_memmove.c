@@ -6,21 +6,28 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 20:16:41 by ablin             #+#    #+#             */
-/*   Updated: 2017/11/30 23:53:33 by ablin            ###   ########.fr       */
+/*   Updated: 2017/12/02 02:18:33 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t i;
+	char *str1;
+	char *str2;
 
 	i = 0;
+	str1 = (char *)dst;
+	str2 = (char *)src;
+	if (dst > src)
+		
 	while (i < len)
 	{
-		((char *)dst)[i] = ((char*)src)[i];
+		str1[i] = str2[i];
 		i++;
 	}
-	return (dst);
+	return (str1);
 }

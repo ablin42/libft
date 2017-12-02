@@ -26,5 +26,12 @@ int	main()
 	printf("ME(Rapture, x)		: %s 	||	", ft_strchr(rap, 'x'));
 	printf("LIB	: %s\n", strchr(rap, 'x'));
 
+	char buf[] = "Je suis un poisson.";
+
+	printf("ME(Je suis un poisson, p): %s 	||	", ft_strchr(buf, 0));
+	printf("LIB	: %s\n", strchr(buf, 0));
+	
+	printf("ME(, x): %s 	||	", ft_strchr("", 'x'));
+	printf("LIB	: %s\n", strchr("", 'x'));
 	return (0);
 }

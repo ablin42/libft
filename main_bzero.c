@@ -13,12 +13,17 @@ int	main()
 	strcpy(ent, "Entropy");
 	strcpy(voi, "");
 	
-	//changer type retour ft
-	printf("ME(Entropy, 3):	%s", ft_bzero(ent, 3));
-	//printf("LIB	:"); bzero(ent, 3);
-
-	printf("\nME(\"\"):	%s", ft_bzero(voi, 0));
-	//printf("LIB	: %s\n"); bzero(voi, 0);
+	ft_bzero(ent, 3);
+	printf("ME	: %s \n", ent);
+	strcpy(ent, "Entropy");
+	bzero(ent, 3);
+	printf("LIB	: %s \n", ent);
+	
+	ft_bzero(voi, 4);
+	printf("ME	: %s \n", voi);
+	strcpy(voi, "");
+	bzero(voi, 4);
+	printf("LIB	: %s \n", voi);
 
 	return (0);
 }

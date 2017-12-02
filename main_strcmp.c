@@ -33,5 +33,8 @@ int	main()
 
 	printf("ME(ABCZ, ABCA)	: %d 	||	", ft_strcmp(kill, ext));
 	printf("LIB	: %d\n", strcmp(kill, ext));
+	
+	printf("ME(\'\\200\', \'\\0\')	: %d 	||	", ft_strcmp("\200", "\0"));
+	printf("LIB	: %d\n", strcmp("\200", "\0"));
 	return (0);
 }

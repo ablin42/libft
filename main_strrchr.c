@@ -31,7 +31,7 @@ int	main()
 	printf("ME(Destruction, t)	: %s		||	", ft_strchr(des, 't'));
 	printf("LIB	: %s\n", strchr(des, 't'));
 
-
+	printf("%s",ft_strrchr("abcd", 'a'));
 
 	return (0);
 }

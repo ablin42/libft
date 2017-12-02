@@ -25,7 +25,7 @@ int	main()
 	strcpy(kill, "ABCZ");
 	strcpy(ext, "ABCA");
 	
-	printf("ME(Test, Test, 4)	: %d	||	", ft_memcmp(ent, rap, 4));
+	/*printf("ME(Test, Test, 4)	: %d	||	", ft_memcmp(ent, rap, 4));
 	printf("LIB	: %d\n", memcmp(ent, rap, 4));
 	
 	printf("ME(Dest, Zest, 4)	: %d	||	", ft_memcmp(des, voi, 4));
@@ -33,5 +33,20 @@ int	main()
 
 	printf("ME(ABCZ, ABCA, 4)	: %d 	||	", ft_memcmp(kill, ext, 4));
 	printf("LIB	: %d\n", memcmp(kill, ext, 4));
+*/
+
+	printf("ME: %d	||	", ft_memcmp("ab\0ab", "ab\0ab", 6));
+	printf("LIB: %d \n", memcmp("ab\0ab", "ab\0ab", 6));
+	printf("ME: %d	||	", ft_memcmp("ab\0ab", "ab\0ac", 6));
+	printf("LIB: %d \n", memcmp("ab\0ab", "ab\0ac", 6));
+	printf("ME: %d	||	", ft_memcmp("aaa", "aad", 4));
+	printf("LIB: %d \n", memcmp("aaa", "aad", 4));
+	printf("*ME: %d	||	", ft_memcmp("aab", "aac", 2));
+	printf("LIB: %d \n", memcmp("aab", "aac", 2));
+	printf("ME: %d	||	", ft_memcmp("aww", "bpp", 0));
+	printf("LIB: %d \n", memcmp("aww", "bpp", 0));
+	printf("ME: %d	||	", ft_memcmp("\200", "\0", 1));
+	printf("LIB: %d \n", memcmp("\200", "\0", 1));
+
 	return (0);
 }
