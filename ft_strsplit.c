@@ -53,14 +53,12 @@ char	**ft_strsplit(char const *s, char c)
 	{
 		k = 0;
 
-		while (s[i] == c && s[i + 1] != c && s[i + 1] != '\0')
+		while (s[i] == c)
 		{
 			start = i + 1;
 			i++;
 		}
 
-		if (s[i] != c && s[i - 1] == c && s[i] != '\0')
-		{
 
 			tmp = ft_word_length(s, c, start);
 			if ((split[j] = (char *)malloc(sizeof(**split) * (tmp + 1))) == NULL)
@@ -69,16 +67,14 @@ char	**ft_strsplit(char const *s, char c)
 			while (k < tmp)
 			{
 				split[j][k] = s[i + k];
-				ft_putchar(split[j][k]);
 				k++;
 			}
 		j++;
 		k--;
-		}
+		
 
 		i = i + k;
 		i++;
-		ft_putchar('\n');
 	}
 	return (split);
 }
