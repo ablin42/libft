@@ -5,37 +5,33 @@
 
 int	main()
 {
-	char *ent;
-	char *rap;
-	char *des;
-	char *voi;
-	char *kill;
-	char *ext;
-
-	ent = (char*)malloc(sizeof(ent) * (30 + 1));
-	rap = (char*)malloc(sizeof(rap) * (30 + 1));
-	des = (char*)malloc(sizeof(des) * (30 + 1));
-	voi = (char*)malloc(sizeof(voi) * (30 + 1));
-	kill = (char*)malloc(sizeof(kill) * (4 + 1));
-	ext = (char*)malloc(sizeof(ext) * (11 + 1));
-	strcpy(ent, "Entropy");
-	strcpy(rap, "Rapture");
-	strcpy(des, "Destruction");
-	strcpy(voi, "Void");
-	strcpy(kill, "Kill");
-	strcpy(ext, "Exterminate");
+	char	buf1[] = "Ceci est un test.";
+	char	buf2[200];
 	
-	printf("ME(Entropy, Rapture, p, 7)	: %s		||	", ft_memccpy(ent, rap, 'p', 7));
-	printf("LIB	: %s\n", memccpy(ent, rap, 'p', 7));
+	printf("ME	: %s			||	", ft_memccpy(buf2, buf1, 'i', 10));
+	printf("LIB	: %s\n", memccpy(buf2, buf1, 'i', 10));
 
-	printf("ME(Entropy, Rapture, p, 2)	: %s	||	", ft_memccpy(ent, rap, 'p', 2));
-	printf("LIB	: %s\n", memccpy(ent, rap, 'p', 2));
+	printf("ME	: %s		||	", ft_memccpy(buf2, buf1, 'k', 5));
+	printf("LIB	: %s\n", memccpy(buf2, buf1, 'k', 5));
 
-	printf("ME(Destruction, Void, x, 4)	: %s	||	", ft_memccpy(des, voi, 'x', 4));
-	printf("LIB	: %s\n", memccpy(des, voi, 'x', 4));
+	printf("ME	: %s		||	", ft_memccpy(buf2, buf1, 0, 0));
+	printf("LIB	: %s\n", memccpy(buf2, buf1, 0, 0));
 
-	printf("ME(Kill, Exterminate, o, 10)	: %s	||	", ft_memccpy(kill, ext, 'o', 10));
-	printf("LIB	: %s\n", memccpy(kill, ext, 'p', 10));
+	printf("ME	: %s			||	", ft_memccpy(buf2, buf1, 0, sizeof(buf1)));
+	printf("LIB	: %s\n", memccpy(buf2, buf1, 0, sizeof(buf1)));
+
+	printf("ME	: %s	||	", ft_memccpy(buf2, buf1, 'C', 10));
+	printf("LIB	: %s\n", memccpy(buf2, buf1, 'C', 10));
+
+	printf("ME	: %s			||	", ft_memccpy(buf2, buf1, 0, sizeof(buf1)));
+	printf("LIB	: %s\n", memccpy(buf2, buf1, 0, sizeof(buf1)));
+
+	char dest[] = "abcdefghijklmnopqrstuvwxyz";
+
+	printf("ME	: %s		||	", ft_memccpy(dest, strdup("test\200string"), '\200', 12));
+	char dest2[] = "abcdefghijklmnopqrstuvwxyz";
+	printf("LIB	: %s\n", memccpy(dest2, strdup("test\200string"), '\200', 12));
+
 
 	return (0);
 }

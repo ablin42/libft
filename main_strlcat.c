@@ -25,13 +25,13 @@ int	main()
 	strcpy(kill, "Kill");
 	strcpy(ext, "Exterminate");
 	
-	printf("ME(Entropy, Rapture, 4)		: %x 		||	", ft_strlcat(ent, rap, 4));
-	//printf("LIB	: %s\n", strlcat(ent, rap, 4));
+	printf("ME(Entropy, Rapture, 4)		: %lu 		||	", ft_strlcat(ent, rap, 4));
+	printf("LIB	: %lu\n", strlcat(ent, rap, 4));
 	
-	printf("ME(Destruction, Void, 8)	: %x	||	", ft_strlcat(des, voi, 8));
-	//printf("LIB	: %s\n", strlcat(des, voi, 8));
-	//CRASH TEST OVERFLOW
-	printf("ME(Kill, Exterminate, 13)	: %x	||	", ft_strlcat(kill, ext, 13));
-	//printf("LIB	: %s\n", strlcat(kill, ext, 13));
+	printf("ME(Destruction, Void, 8)	: %lu	||	", ft_strlcat(des, voi, 8));
+	printf("LIB	: %lu\n", strlcat(des, voi, 8));
+	
+	printf("ME(Kill, Exterminate, 13)	: %lu	||	", ft_strlcat(kill, ext, 13));
+	printf("LIB	: %lu\n", strlcat(kill, ext, 13));
 	return (0);
 }

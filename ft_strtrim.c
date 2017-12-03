@@ -6,32 +6,51 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 20:19:55 by ablin             #+#    #+#             */
-/*   Updated: 2017/12/01 01:20:21 by ablin            ###   ########.fr       */
+/*   Updated: 2017/12/02 23:33:58 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+static int	ft_forward(char const *s)
+{
+	int		i;
+
+	i = 0;
+	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
+		i++;
+	return (i);
+}
+
+static int	ft_backward(char const *s)
+{
+	int		end;
+
+	end = ft_strlen(s) - 1;
+	while (s[end] == ' ' || s[end] == '\t' || s[end] == '\n')
+		end--;
+	return (end);
+}
+
+char		*ft_strtrim(char const *s)
 {
 	int		i;
 	int		j;
 	int		end;
 	char	*trim;
 
-	i = 0;
 	j = 0;
-	end = ft_strlen(s);
+	end = ft_strlen(s) - 1;
 	trim = (char *)malloc(sizeof(trim) * (ft_strlen(s) + 1));
 	if (trim == NULL)
 		return (NULL);
-	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
-		i++;
-	while (s[end] == ' ' || s[end] == '\t' || s[end] == '\n')
-		end--;
-	end = end * -1;
-	end = ft_strlen(s) - i - end;
-	while (s[i] != '\0' && j < end)
+	i = ft_forward(s);
+	if (i == end)
+		return ("");
+	end = ft_backward(s);
+	if (end == 0)
+		return ("");
+	while (i <= end)
 	{
 		trim[j] = s[i];
 		i++;

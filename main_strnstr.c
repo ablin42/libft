@@ -12,7 +12,7 @@ int	main()
 	printf("ME: %s		||	", ft_strnstr(buf, "deux", 10));
 	printf("LIB	: %s\n", strnstr(buf, "deux", 10));
 	
-	printf("ME: %s			||	", ft_strnstr(buf, "9", 3));
+	printf("ME: %s		||	", ft_strnstr(buf, "9", 3));
 	printf("LIB	: %s\n", strnstr(buf, "9", 3));
 	
 	printf("ME: %s		||	", ft_strnstr(buf, "", 6));
@@ -24,7 +24,7 @@ int	main()
 	printf("ME: %s			||	", ft_strnstr(buf, "9", 10));
 	printf("LIB	: %s\n", strnstr(buf, "9", 10));
 	
-	printf("ME: %s			||	", ft_strnstr(buf, "9", 8));
+	printf("ME: %s		||	", ft_strnstr(buf, "9", 8));
 	printf("LIB	: %s\n", strnstr(buf, "9", 8));
 	
 	return (0);

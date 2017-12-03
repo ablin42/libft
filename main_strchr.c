@@ -17,7 +17,7 @@ int	main()
 	strcpy(rap, "Rapture");
 
 	
-	printf("ME(Entropy, o)		: %s		||	", ft_strchr(ent, 'o'));
+	/*printf("ME(Entropy, o)		: %s		||	", ft_strchr(ent, 'o'));
 	printf("LIB	: %s\n", strchr(ent, 'o'));
 	
 	printf("ME(Destruction, D)	: %s	||	", ft_strchr(des, 'D'));
@@ -25,13 +25,13 @@ int	main()
 
 	printf("ME(Rapture, x)		: %s 	||	", ft_strchr(rap, 'x'));
 	printf("LIB	: %s\n", strchr(rap, 'x'));
-
+*/
 	char buf[] = "Je suis un poisson.";
 
-	printf("ME(Je suis un poisson, p): %s 	||	", ft_strchr(buf, 0));
+	printf("ME(): %s 	||	", ft_strchr(buf, 0));
 	printf("LIB	: %s\n", strchr(buf, 0));
 	
-	printf("ME(, x): %s 	||	", ft_strchr("", 'x'));
+	printf("ME(): %s 	||	", ft_strchr("", 'x'));
 	printf("LIB	: %s\n", strchr("", 'x'));
 	return (0);
 }

@@ -22,5 +22,7 @@ int	main()
 	printf("ME(Destruction is key)		: %s \n", ft_strtrim(des));
 
 	printf("ME(Exterminate the unworthy)	: %s \n", ft_strtrim(ext));
+
+	printf("ME %s", ft_strtrim("  \n  \t  lorem \n ipsum \t dolor \n sit \t amet  \t \n "));
 	return (0);
 }
