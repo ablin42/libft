@@ -6,7 +6,7 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 01:00:46 by ablin             #+#    #+#             */
-/*   Updated: 2017/12/03 20:19:59 by ablin            ###   ########.fr       */
+/*   Updated: 2017/12/04 17:58:27 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 size_t				ft_strlen(const char *s);
 size_t				ft_strlcat(char *restrict dst, const char *restrict src,
 		size_t size);
+t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
 void				*ft_memcpy(void *restrict dst, const void *restrict src,

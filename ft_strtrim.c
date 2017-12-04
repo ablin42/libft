@@ -6,7 +6,7 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 20:19:55 by ablin             #+#    #+#             */
-/*   Updated: 2017/12/02 23:33:58 by ablin            ###   ########.fr       */
+/*   Updated: 2017/12/04 21:13:36 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ static int	ft_backward(char const *s)
 	end = ft_strlen(s) - 1;
 	while (s[end] == ' ' || s[end] == '\t' || s[end] == '\n')
 		end--;
+	if (end < 0)
+		end = 0;
 	return (end);
 }
 
@@ -41,21 +43,12 @@ char		*ft_strtrim(char const *s)
 
 	j = 0;
 	end = ft_strlen(s) - 1;
-	trim = (char *)malloc(sizeof(trim) * (ft_strlen(s) + 1));
-	if (trim == NULL)
-		return (NULL);
 	i = ft_forward(s);
-	if (i == end)
+	if (i == end || ft_strcmp(s, "") == 0)
 		return ("");
 	end = ft_backward(s);
 	if (end == 0)
 		return ("");
-	while (i <= end)
-	{
-		trim[j] = s[i];
-		i++;
-		j++;
-	}
-	trim[j] = '\0';
+	trim = ft_strsub(s, i, (end - i + 1));
 	return (trim);
 }

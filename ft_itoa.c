@@ -6,7 +6,7 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 20:23:23 by ablin             #+#    #+#             */
-/*   Updated: 2017/12/02 02:50:13 by ablin            ###   ########.fr       */
+/*   Updated: 2017/12/04 21:15:42 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,14 @@ char		*ft_itoa(int n)
 	nb = n;
 	while (nb /= 10)
 		i++;
-	if ((str = (char*)malloc(sizeof(char) * (i))) == NULL)
-		return (NULL);
 	if (n < 0)
 	{
 		n = n * -1;
 		i = i + 1;
 		neg = 1;
 	}
+	if ((str = (char*)malloc(sizeof(char) * (i + 1))) == NULL)
+		return (NULL);
 	str[i] = '\0';
 	return (fillstr(i, n, neg, str));
 }

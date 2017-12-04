@@ -6,7 +6,7 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 00:38:36 by ablin             #+#    #+#             */
-/*   Updated: 2017/12/01 00:45:20 by ablin            ###   ########.fr       */
+/*   Updated: 2017/12/04 17:00:35 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 	while (tmplist != NULL)
 	{
 		tmp = tmplist->next;
-		del(((*alst)->content), ((*alst)->content_size));
-		free(*alst);
+		del((tmplist->content), (tmplist->content_size));
+		free(tmplist);
 		tmplist = tmp;
 	}
 	*alst = NULL;

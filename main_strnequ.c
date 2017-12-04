@@ -5,30 +5,12 @@
 
 int	main()
 {
-	char *ent;
-	char *rap;
-	char *des;
-	char *voi;
-	char *kill;
-	char *ext;
+	printf("%d\n", ft_strnequ("ededeqdf", "", 0));
 
-	ent = (char*)malloc(sizeof(ent) * (30 + 1));
-	rap = (char*)malloc(sizeof(rap) * (30 + 1));
-	des = (char*)malloc(sizeof(des) * (30 + 1));
-	voi = (char*)malloc(sizeof(voi) * (30 + 1));
-	kill = (char*)malloc(sizeof(kill) * (4 + 1));
-	ext = (char*)malloc(sizeof(ext) * (11 + 1));
-	strcpy(ent, "Test");
-	strcpy(rap, "Test");
-	strcpy(des, "Dest");
-	strcpy(voi, "Zest");
-	strcpy(kill, "ABCZ");
-	strcpy(ext, "ABCA");
+	printf("%d\n", ft_strnequ("abcde", "abdfe", 2));
 	
-	printf("ME(Test, Test, 2): %d \n", ft_strnequ(ent, rap, 2));
+	printf("%d\n", ft_strnequ("abc", "abc", 100));
 	
-	printf("ME(Dest, Zest, 2): %d \n", ft_strnequ(des, voi, 2));
-
-	printf("ME(ABCZ, ABCA, 3): %d \n", ft_strnequ(kill, ext, 3));
+	printf("%d\n", ft_strnequ("abcde", "abdde", 5));
 	return (0);
 }

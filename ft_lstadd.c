@@ -6,7 +6,7 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 00:38:08 by ablin             #+#    #+#             */
-/*   Updated: 2017/12/01 00:38:10 by ablin            ###   ########.fr       */
+/*   Updated: 2017/12/04 18:06:13 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {
-	while (alst != NULL && new != NULL)
+	if (alst != NULL && new != NULL)
 	{
 		new->next = *alst;
 		*alst = new;

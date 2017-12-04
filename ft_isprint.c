@@ -6,20 +6,14 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 20:14:03 by ablin             #+#    #+#             */
-/*   Updated: 2017/12/01 00:44:29 by ablin            ###   ########.fr       */
+/*   Updated: 2017/12/04 21:27:37 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	if (c >= 'A' && c <= 'Z')
+	if (c >= 32 && c < 127)
 		return (1);
-	else if (c >= 'a' && c <= 'z')
-		return (2);
-	else if (c >= '0' && c <= '9')
-		return (4);
-	else if (c >= 32 && c <= 126)
-		return (16);
 	else
 		return (0);
 }
