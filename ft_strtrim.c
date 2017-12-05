@@ -6,7 +6,7 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 20:19:55 by ablin             #+#    #+#             */
-/*   Updated: 2017/12/05 00:24:33 by ablin            ###   ########.fr       */
+/*   Updated: 2017/12/05 04:43:31 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,10 +47,8 @@ char		*ft_strtrim(char const *s)
 	end = ft_strlen(s) - 1;
 	i = ft_forward(s);
 	if (i == end)
-		return ("");
+		return (ft_strnew(0));
 	end = ft_backward(s);
-	if (end == 0)
-		return ("");
 	trim = ft_strsub(s, i, (end - i + 1));
 	return (trim);
 }
