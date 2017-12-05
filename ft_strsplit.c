@@ -6,7 +6,7 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/03 21:41:19 by ablin             #+#    #+#             */
-/*   Updated: 2017/12/03 21:43:22 by ablin            ###   ########.fr       */
+/*   Updated: 2017/12/04 23:04:55 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ char		**ft_strsplit(char const *s, char c)
 	char	**split;
 
 	i = 0;
+	if (s == NULL)
+		return (NULL);
 	nb_word = ft_nb_words(s, c);
 	if ((split = (char **)malloc(sizeof(*split) * (nb_word + 1))) == NULL)
 		return (NULL);
