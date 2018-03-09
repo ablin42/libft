@@ -6,7 +6,7 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 20:19:55 by ablin             #+#    #+#             */
-/*   Updated: 2017/12/05 04:43:31 by ablin            ###   ########.fr       */
+/*   Updated: 2018/03/09 23:53:13 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,13 @@ char		*ft_strtrim(char const *s)
 	int		end;
 	char	*trim;
 
-	if (!s)
-		return (NULL);
+	if (!s || ft_strcmp(s, "") == 0)
+		return ((char *)s);
 	j = 0;
 	end = ft_strlen(s) - 1;
 	i = ft_forward(s);
+	if (i == (int)ft_strlen(s))
+		return ("");
 	if (i == end)
 		return (ft_strnew(0));
 	end = ft_backward(s);

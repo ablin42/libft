@@ -18,7 +18,7 @@ NAME = libft.a
 CC = gcc
 CFLAGS = -Werror -Wall -Wextra
 SRC = $(SRC_NAME)
-OBJ = $(addprefix $(OBJ_PATH)/,$(OBJ_NAME))
+OBJ = $(OBJ_NAME)
 
 all: $(NAME)
 
@@ -27,7 +27,6 @@ $(NAME): $(OBJ)
 	ranlib $(NAME)
 
 $(OBJ_PATH)/%.o: $(SRC)
-	@mkdir $(OBJ_PATH) 2> /dev/null || true
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 clean:
