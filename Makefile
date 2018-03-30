@@ -10,7 +10,7 @@ SRC_NAME = ft_atoi.c ft_isalpha.c ft_isprint.c ft_lstdel.c ft_lstmap.c\
 	ft_memmove.c ft_putchar_fd.c ft_putnbr.c ft_putstr_fd.c ft_strclr.c\
 	ft_strdel.c ft_striter.c ft_strlcat.c ft_strmapi.c ft_strncpy.c\
 	ft_strnew.c ft_strsplit.c ft_strtrim.c ft_islower.c ft_isupper.c\
-	ft_isspace.c ft_isblank.c
+	ft_isspace.c ft_isblank.c get_next_line.c
 OBJ_PATH = obj
 OBJ_NAME = $(SRC_NAME:.c=.o)
 FRAMEWORKS = -framework OpenGL -framework AppKit
