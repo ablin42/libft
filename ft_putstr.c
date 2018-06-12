@@ -17,6 +17,11 @@ void	ft_putstr(char const *s)
 	int i;
 
 	i = 0;
+	if (s == NULL || s == 0 || ft_strcmp(s, "") == 0)
+	{
+		ft_putstr("(null)");
+		return ;
+	}
 	while (s[i] != '\0')
 		i++;
 	write(1, s, i);
