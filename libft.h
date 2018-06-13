@@ -57,6 +57,7 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
+char				*ft_itoa_base_long(unsigned long n, int base);
 char				*ft_itoa_base(unsigned int n, int base);
 char				*ft_itoa_base_up(unsigned int n, int base);
 char				*ft_hex_to_bin(int hex);
