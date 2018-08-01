@@ -11,7 +11,7 @@ SRC_NAME = ft_atoi.c ft_isalpha.c ft_isprint.c ft_lstdel.c ft_lstmap.c\
 	ft_strdel.c ft_striter.c ft_strlcat.c ft_strmapi.c ft_strncpy.c\
 	ft_strnew.c ft_strsplit.c ft_strtrim.c ft_islower.c ft_isupper.c\
 	ft_isspace.c ft_isblank.c get_next_line.c ft_hex_to_bin.c ft_putwchar.c\
-	ft_putwstr.c ft_itoa_base.c
+	ft_putwstr.c ft_itoa_base.c ft_strtoupper.c
 OBJ_PATH = obj
 OBJ_NAME = $(SRC_NAME:.c=.o)
 FRAMEWORKS = -framework OpenGL -framework AppKit
