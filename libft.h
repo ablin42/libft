@@ -6,17 +6,16 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 01:00:46 by ablin             #+#    #+#             */
-/*   Updated: 2018/03/30 20:02:04 by ablin            ###   ########.fr       */
+/*   Updated: 2018/08/25 21:39:08 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef __LIBFT_H
 # define __LIBFT_H
-# include <string.h>
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
-# include "get_next_line.h"
+# include "get_next_line/get_next_line.h"
 
 typedef	struct		s_list
 {
