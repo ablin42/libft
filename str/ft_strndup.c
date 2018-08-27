@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 20:17:43 by ablin             #+#    #+#             */
-/*   Updated: 2018/08/27 19:37:54 by ablin            ###   ########.fr       */
+/*   Created: 2017/12/01 00:07:05 by ablin             #+#    #+#             */
+/*   Updated: 2018/08/27 19:41:34 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_putendl_fd(char const *s, int fd)
+char	*ft_strndup(const char *s1, size_t n)
 {
-	int i;
+	size_t		i;
+	char		*dest;
 
 	i = 0;
-	while (s[i] != '\0')
+	if ((dest = (char*)malloc(sizeof(*s1) * (n + 1))) == NULL)
+		return (NULL);
+	while (i < n)
 	{
-		write(fd, &s[i], 1);
+		dest[i] = s1[i];
 		i++;
 	}
-	write(fd, "\n", 1);
+	dest[i] = '\0';
+	return (dest);
 }

@@ -6,12 +6,12 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/28 19:05:23 by ablin             #+#    #+#             */
-/*   Updated: 2018/03/30 20:02:33 by ablin            ###   ########.fr       */
+/*   Updated: 2018/08/27 19:35:38 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-#include "libft.h"
+#include "../libft.h"
 
 t_lst		*add_list(t_lst *lst, int fd)
 {

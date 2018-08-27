@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 20:17:43 by ablin             #+#    #+#             */
-/*   Updated: 2018/08/27 19:37:54 by ablin            ###   ########.fr       */
+/*   Created: 2017/12/01 00:53:30 by ablin             #+#    #+#             */
+/*   Updated: 2018/08/27 19:41:00 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_putendl_fd(char const *s, int fd)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int i;
+	unsigned int	i;
+	char			*str;
 
 	i = 0;
+	if (f == NULL || s == NULL)
+		return (NULL);
+	if ((str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1))) == NULL)
+		return (NULL);
 	while (s[i] != '\0')
 	{
-		write(fd, &s[i], 1);
+		str[i] = (f)(i, s[i]);
 		i++;
 	}
-	write(fd, "\n", 1);
+	str[i] = '\0';
+	return (str);
 }

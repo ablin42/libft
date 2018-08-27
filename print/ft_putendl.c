@@ -6,11 +6,11 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 20:17:32 by ablin             #+#    #+#             */
-/*   Updated: 2017/12/01 00:48:31 by ablin            ###   ########.fr       */
+/*   Updated: 2018/08/27 19:37:46 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 void	ft_putendl(char const *s)
 {

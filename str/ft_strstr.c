@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/21 20:17:43 by ablin             #+#    #+#             */
-/*   Updated: 2018/08/27 19:37:54 by ablin            ###   ########.fr       */
+/*   Created: 2017/11/21 20:22:36 by ablin             #+#    #+#             */
+/*   Updated: 2018/08/27 19:42:47 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_putendl_fd(char const *s, int fd)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
 	int i;
+	int j;
 
 	i = 0;
-	while (s[i] != '\0')
+	j = 0;
+	if (ft_strcmp(needle, "") == 0)
+		return ((char *)haystack);
+	while (haystack[i] != '\0')
 	{
-		write(fd, &s[i], 1);
+		j = 0;
+		while (haystack[i + j] == needle[j])
+		{
+			if (needle[j + 1] == '\0')
+				return (&((char *)haystack)[i]);
+			j++;
+		}
 		i++;
 	}
-	write(fd, "\n", 1);
+	return (NULL);
 }

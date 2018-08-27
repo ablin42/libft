@@ -6,11 +6,11 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 20:23:23 by ablin             #+#    #+#             */
-/*   Updated: 2017/12/04 21:15:42 by ablin            ###   ########.fr       */
+/*   Updated: 2018/08/27 19:33:05 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 static char	*fillstr(int i, int n, int neg, char *str)
 {

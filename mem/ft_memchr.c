@@ -6,11 +6,11 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 20:20:03 by ablin             #+#    #+#             */
-/*   Updated: 2017/12/01 00:47:41 by ablin            ###   ########.fr       */
+/*   Updated: 2018/08/27 19:26:00 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

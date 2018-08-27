@@ -1,17 +1,21 @@
-SRC_NAME = ft_atoi.c ft_isalpha.c ft_isprint.c ft_lstdel.c ft_lstmap.c\
-	ft_memccpy.c ft_memcpy.c ft_memset.c ft_putendl.c ft_putnbr_fd.c\
-	ft_strcat.c ft_strcmp.c ft_strdup.c ft_striteri.c ft_strlen.c\
-	ft_strncat.c ft_strndup.c ft_strnstr.c ft_strstr.c ft_tolower.c\
-	ft_bzero.c ft_isascii.c ft_itoa.c ft_lstdelone.c ft_lstnew.c ft_memchr.c\
-	ft_memdel.c ft_putchar.c ft_putendl_fd.c ft_putstr.c ft_strchr.c\
-	ft_strcpy.c ft_strequ.c ft_strjoin.c ft_strmap.c ft_strncmp.c\
-	ft_strnequ.c ft_strrchr.c ft_strsub.c ft_toupper.c ft_isalnum.c\
-	ft_isdigit.c ft_lstadd.c ft_lstiter.c ft_memalloc.c ft_memcmp.c\
-	ft_memmove.c ft_putchar_fd.c ft_putnbr.c ft_putstr_fd.c ft_strclr.c\
-	ft_strdel.c ft_striter.c ft_strlcat.c ft_strmapi.c ft_strncpy.c\
-	ft_strnew.c ft_strsplit.c ft_strtrim.c ft_islower.c ft_isupper.c\
-	ft_isspace.c ft_isblank.c get_next_line.c ft_hex_to_bin.c ft_putwchar.c\
-	ft_putwstr.c ft_itoa_base.c ft_strtoupper.c
+SRC_NAME = others/ft_atoi.c is/ft_isalpha.c is/ft_isprint.c lst/ft_lstdel.c\
+	lst/ft_lstmap.c mem/ft_memccpy.c mem/ft_memcpy.c mem/ft_memset.c\
+	print/ft_putendl.c print/ft_putnbr_fd.c str/ft_strcat.c str/ft_strcmp.c\
+	str/ft_strdup.c str/ft_striteri.c str/ft_strlen.c str/ft_strncat.c\
+	str/ft_strndup.c str/ft_strnstr.c str/ft_strstr.c others/ft_tolower.c\
+	mem/ft_bzero.c is/ft_isascii.c others/ft_itoa.c lst/ft_lstdelone.c\
+	lst/ft_lstnew.c mem/ft_memchr.c mem/ft_memdel.c print/ft_putchar.c\
+	print/ft_putendl_fd.c print/ft_putstr.c str/ft_strchr.c str/ft_strcpy.c\
+	str/ft_strequ.c str/ft_strjoin.c str/ft_strmap.c str/ft_strncmp.c\
+	str/ft_strnequ.c str/ft_strrchr.c str/ft_strsub.c others/ft_toupper.c\
+	is/ft_isalnum.c is/ft_isdigit.c lst/ft_lstadd.c lst/ft_lstiter.c\
+	mem/ft_memalloc.c mem/ft_memcmp.c mem/ft_memmove.c print/ft_putchar_fd.c\
+	print/ft_putnbr.c print/ft_putstr_fd.c str/ft_strclr.c str/ft_strdel.c\
+	str/ft_striter.c str/ft_strlcat.c str/ft_strmapi.c str/ft_strncpy.c\
+	str/ft_strnew.c str/ft_strsplit.c str/ft_strtrim.c is/ft_islower.c\
+	is/ft_isupper.c is/ft_isspace.c is/ft_isblank.c others/ft_hex_to_bin.c\
+	print/ft_putwchar.c print/ft_putwstr.c others/ft_itoa_base.c\
+	str/ft_strtoupper.c getnextline/get_next_line.c
 OBJ_PATH = obj
 OBJ_NAME = $(SRC_NAME:.c=.o)
 FRAMEWORKS = -framework OpenGL -framework AppKit

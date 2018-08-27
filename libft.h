@@ -6,7 +6,7 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 01:00:46 by ablin             #+#    #+#             */
-/*   Updated: 2018/08/25 21:39:08 by ablin            ###   ########.fr       */
+/*   Updated: 2018/08/27 19:43:38 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
-# include "get_next_line/get_next_line.h"
+# include "getnextline/get_next_line.h"
 
 typedef	struct		s_list
 {
@@ -57,7 +57,6 @@ void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 char				*ft_strtoupper(char *str);
-char				*ft_itoa_base_max(intmax_t n, int base);
 char				*ft_itoa_base_u(uintmax_t n, int base);
 char				*ft_itoa_base(unsigned int n, int base);
 char				*ft_itoa_base_up(unsigned int n, int base);

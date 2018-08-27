@@ -6,11 +6,11 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 00:46:28 by ablin             #+#    #+#             */
-/*   Updated: 2017/12/04 23:09:06 by ablin            ###   ########.fr       */
+/*   Updated: 2018/08/27 19:24:57 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 t_list	*ft_lstnew(void const *content, size_t content_size)
 {

@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 char	*ft_hex_to_bin(int hex)
 {

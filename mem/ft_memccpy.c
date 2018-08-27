@@ -6,11 +6,11 @@
 /*   By: ablin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/21 20:30:32 by ablin             #+#    #+#             */
-/*   Updated: 2017/12/02 20:24:33 by ablin            ###   ########.fr       */
+/*   Updated: 2018/08/27 19:25:46 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 void	*ft_memccpy(void *restrict dst, const void *restrict src,
 int c, size_t n)
