@@ -6,7 +6,7 @@
 /*   By: ablin <ablin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 01:13:03 by ablin             #+#    #+#             */
-/*   Updated: 2018/09/02 21:07:02 by ablin            ###   ########.fr       */
+/*   Updated: 2018/09/02 21:14:48 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 # include "../../libft.h"
 # include <stdarg.h>
 
-# define C { "c%", c_padding }
-# define CC { "C", print_wchar }
-# define S { "s ", str_handler }
-# define SS { "S", print_wstr }
-# define INT { "dDi", int_handler }
-# define HEX { "oOuUxXp", hex_handler }
+# define FUN_C { "c%", c_padding }
+# define FUN_CC { "C", print_wchar }
+# define FUN_S { "s ", str_handler }
+# define FUN_SS { "S", print_wstr }
+# define FUN_INT { "dDi", int_handler }
+# define FUN_HEX { "oOuUxXp", hex_handler }
 
 typedef enum		e_mod
 {

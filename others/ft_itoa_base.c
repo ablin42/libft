@@ -63,10 +63,10 @@ char		*ft_itoa_base_up(unsigned int n, int base)
 
 char		*ft_itoa_base_u(uintmax_t n, int base)
 {
-	int		i;
+	int			i;
 	uintmax_t	nb;
-	char	*str;
-	char	tab[17];
+	char		*str;
+	char		tab[17];
 
 	if (n == 0)
 		return (ft_strdup("0"));

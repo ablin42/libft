@@ -6,7 +6,7 @@
 /*   By: ablin <ablin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/09 02:36:41 by ablin             #+#    #+#             */
-/*   Updated: 2018/08/22 02:20:28 by ablin            ###   ########.fr       */
+/*   Updated: 2018/09/02 21:15:25 by ablin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ void	get_handler(t_arg *lst, va_list ap, int *retour)
 {
 	int					ret;
 	int					i;
-	static	const t_fun	handle[6] = {INT, HEX, C, CC, S, SS};
+	static	const t_fun	handle[6] = {FUN_INT, FUN_HEX, FUN_C, FUN_CC,
+									FUN_S, FUN_SS};
 
 	i = 0;
 	ret = 0;
